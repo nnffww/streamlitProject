@@ -17,7 +17,7 @@ if choice == 'News Article':
   if category == 'A':
     st.button("Ad sales boost Time Warner profit")
     
-    if st.button("Ad sales boost Time Warner profit")
+     if st.button("Ad sales boost Time Warner profit")
         url = ('https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business/001.txt?token=GHSAT0AAAAAAB44S4MXACBMJIREHY4UYWKSY5O5WRA')
         read_data = request.get(url).content
         st.write(read_data)
