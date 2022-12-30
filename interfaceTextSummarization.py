@@ -10,9 +10,7 @@ st.markdown("<hr size='5' width='100%;'>", unsafe_allow_html=True)
 activities = ["About Us","News Article","Summarize","Statistic"]
 choice = st.sidebar.selectbox("Select Activity", activities)
 
-if choice == 'About Us':
-  
-  
+    
 if choice == 'News Article': 
   category = ["A","B","C","D"]
   option = st.selectbox("Select News Article", category)
