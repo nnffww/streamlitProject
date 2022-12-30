@@ -3,6 +3,10 @@ import pandas as pd
 import numpy as np
 import io
 import requests
+import urllib.request
+import urllib
+from urllib.request import urlopen
+import urllib3
 
 st.set_page_config(page_title="Extractive Text Summarization", page_icon=":tada:", layout="wide")
 st.markdown("<h1 style='text-align: center; color: white;'>EXTRACTIVE BASED TEXT SUMMARIZATION USING SENTIMENT ANALYSIS</h1>", unsafe_allow_html=True)
@@ -19,7 +23,7 @@ if choice == 'News Article':
     
      if st.button("Ad sales boost Time Warner profit")
         url = ('https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business/001.txt?token=GHSAT0AAAAAAB44S4MXACBMJIREHY4UYWKSY5O5WRA')
-        read_data = request.get(url).content
-        st.write(read_data)
+        for line in urllib.request.urlopen(url): 
+            st.write(line.decode('utf-8'))
   
   
