@@ -21,7 +21,7 @@ if choice == 'News Article':
   if category == 'A':
     st.button("Ad sales boost Time Warner profit")
     if st.button("Ad sales boost Time Warner profit")
-        url = ('https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business/001.txt?token=GHSAT0AAAAAAB44S4MXACBMJIREHY4UYWKSY5O5WRA')
+        url = ('https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business/001.txt')
         for line in urllib.request.urlopen(url): 
             st.write(line.decode('utf-8'))
   
