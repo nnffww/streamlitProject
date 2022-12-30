@@ -9,6 +9,6 @@ activities = ["Introduction","News Article","Summarize","Statistic"]
 choice = st.sidebar.selectbox("Select Activity", activities)
 
 if choice == 'News Article': 
-  activities = ["Introduction","News Article","Summarize","Statistic"]
-  choice = st.sidebar.selectbox("Select Activity", activities)
+  category = ["A","B","C","D"]
+  option = st.sidebar.selectbox("Select News Article", category)
   
