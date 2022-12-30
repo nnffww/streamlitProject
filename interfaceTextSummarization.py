@@ -9,7 +9,6 @@ st.markdown("<h1 style='text-align: center; color: white;'>EXTRACTIVE BASED TEXT
 st.markdown("<hr size='5' width='100%;'>", unsafe_allow_html=True)
 activities = ["About Us","News Article","Summarize","Statistic"]
 choice = st.sidebar.selectbox("Select Activity", activities)
-
     
 if choice == 'News Article': 
   category = ["A","B","C","D"]
@@ -19,8 +18,8 @@ if choice == 'News Article':
     st.button("Ad sales boost Time Warner profit")
     
     if st.button("Ad sales boost Time Warner profit")
-    url = ('https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business/001.txt?token=GHSAT0AAAAAAB44S4MXACBMJIREHY4UYWKSY5O5WRA')
-    read_data = request.get(url).content
-    st.write(read_data)
+        url = ('https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business/001.txt?token=GHSAT0AAAAAAB44S4MXACBMJIREHY4UYWKSY5O5WRA')
+        read_data = request.get(url).content
+        st.write(read_data)
   
   
