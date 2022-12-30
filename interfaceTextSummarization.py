@@ -7,3 +7,8 @@ st.markdown("<h1 style='text-align: center; color: white;'>EXTRACTIVE BASED TEXT
 st.markdown("<hr size='5' width='100%;'>", unsafe_allow_html=True)
 activities = ["Introduction","News Article","Summarize","Statistic"]
 choice = st.sidebar.selectbox("Select Activity", activities)
+
+if choice == 'News Article': 
+  activities = ["Introduction","News Article","Summarize","Statistic"]
+  choice = st.sidebar.selectbox("Select Activity", activities)
+  
