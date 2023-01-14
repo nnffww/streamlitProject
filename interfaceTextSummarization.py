@@ -15,11 +15,11 @@ activities = ["About Us","News Article","Summarize","Statistic"]
 choice = st.sidebar.selectbox("Select Activity", activities)
     
 if choice == 'News Article': 
-  category = ["A","B","C","D"]
+  category = ["Business","Entertaiment","Politics","Sport", "Technology"]
   option = st.selectbox("Select News Article", category)
     
   """
-  if category == 'A':
+  if category == 'Business':
     st.button("Ad sales boost Time Warner profit")
     if st.button("Ad sales boost Time Warner profit")
         url = ('https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business/001.txt')
