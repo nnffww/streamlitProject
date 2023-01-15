@@ -8,7 +8,7 @@ import urllib
 from urllib.request import urlopen
 import urllib3
 
-st.set_page_config(page_title="Extractive Text Summarization", page_icon=":tada:", layout="wide", background="green")
+st.set_page_config(page_title="Extractive Text Summarization", page_icon=":tada:", layout="wide")
 st.markdown("<h1 style='text-align: center; color: white;'>EXTRACTIVE BASED TEXT SUMMARIZATION USING SENTIMENT ANALYSIS</h1>", unsafe_allow_html=True)
 st.markdown("<hr size='5' width='100%;'>", unsafe_allow_html=True)
 activities = ["About Us","News Article","Summarize","Statistic"]
