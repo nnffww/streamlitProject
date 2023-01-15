@@ -13,19 +13,22 @@ st.markdown("<h1 style='text-align: center; color: white;'>EXTRACTIVE BASED TEXT
 st.markdown("<hr size='5' width='100%;'>", unsafe_allow_html=True)
 activities = ["About Us","News Article","Summarize","Statistic"]
 choice = st.sidebar.selectbox("Select Activity", activities)
+
+#Set window background color
+window.config(background = "white")
     
 if choice == 'News Article': 
   category = ["Business","Entertaiment","Politics","Sport", "Technology"]
   option = st.selectbox("Select News Article", category)
     
-  
+***
   if category == 'Business':
     st.button("Ad sales boost Time Warner profit")
     if st.button("Ad sales boost Time Warner profit")
         url = ('https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business/001.txt')
         for line in urllib.request.urlopen(url): 
             st.write(line.decode('utf-8'))
-  
+***
   
 if choice == 'Summarize': 
    st.subheader("EXTRACTIVE TEXT SUMMARIZER")
