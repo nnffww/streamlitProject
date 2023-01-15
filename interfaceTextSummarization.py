@@ -14,21 +14,35 @@ st.markdown("<hr size='5' width='100%;'>", unsafe_allow_html=True)
 activities = ["About Us","News Article","Summarize","Statistic"]
 choice = st.sidebar.selectbox("Select Activity", activities)
 
-#Set window background color
-window.config(background = "white")
+# Primary accent for interactive elements
+primaryColor = '#7792E3'
+
+# Background color for the main content area
+backgroundColor = '#273346'
+
+# Background color for sidebar and most interactive widgets
+secondaryBackgroundColor = '#B9F1C0'
+
+# Color used for almost all text
+textColor = '#FFFFFF'
+
+# Font family for all text in the app, except code blocks
+# Accepted values (serif | sans serif | monospace) 
+# Default: "sans serif"
+font = "sans serif"
     
 if choice == 'News Article': 
   category = ["Business","Entertaiment","Politics","Sport", "Technology"]
   option = st.selectbox("Select News Article", category)
     
-***
+  """
   if category == 'Business':
     st.button("Ad sales boost Time Warner profit")
     if st.button("Ad sales boost Time Warner profit")
         url = ('https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business/001.txt')
         for line in urllib.request.urlopen(url): 
             st.write(line.decode('utf-8'))
-***
+  """          
   
 if choice == 'Summarize': 
    st.subheader("EXTRACTIVE TEXT SUMMARIZER")
