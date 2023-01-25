@@ -56,6 +56,10 @@ if choice == 'Summarize':
          Dftxt = uploaded_txt.read()
          raw_text = str(Dftxt,"utf-8")
          st.text(raw_text)
+      if st.button("Summarize"):
+        st.write(raw_text)
+        st.button("Copy text")
+        st.write("Words:")
         
    uploaded_file = st.file_uploader("Choose a file",type=["csv"])
    if uploaded_file is not None:
