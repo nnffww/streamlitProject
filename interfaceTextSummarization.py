@@ -47,6 +47,12 @@ if choice == 'News Article':
           
   
 if choice == 'Summarize': 
+   with st.form(key = 'nlpForm'):
+      text = st.text_area("Original Content","Enter text here")
+      submitted = st.form_submit_button("Summarize")
+      if submitted:
+         st.info("Result")
+        
    uploaded_txt = st.file_uploader("Choose a file",type=["txt"])
    if uploaded_txt is not None:
       st.write(type(uploaded_txt))
