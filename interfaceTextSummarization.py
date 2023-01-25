@@ -41,7 +41,7 @@ if choice == 'News Article':
     st.write(df.head(11))
     aticle1 = st.checkbox('Article 1')
     if article1:
-        st.write(df['Text'][0])
+        st.write(df['Text'][2])
             
           
   
