@@ -39,6 +39,9 @@ if choice == 'News Article':
     url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/train4.csv?token=GHSAT0AAAAAAB44S4MWQC7YOZZYMMJVSCKIY6QWDOQ'
     df = pd.read_csv(url,encoding="latin-1")
     st.write(df.head(11))
+    aticle1 = st.checkbox('Article 1')
+    if article1 :
+        st.write(df['Text'][0])
             
           
   
