@@ -39,9 +39,12 @@ if choice == 'News Article':
   if category == 'Business':
     button1 = st.button("Ad sales boost Time Warner profit")
     if button1: 
-        url = ('business/001.txt')
-        for line in urllib.request.urlopen(url): 
-            st.write(line.decode('utf-8'))
+        url = ('https://github.com/faraawaheeda/streamlitProject/blob/main/business/001.txt')
+        import webbrowser as wb
+        wb.open_new_tab(url)
+       ''' for line in urllib.request.urlopen(url): 
+            st.write(line.decode('utf-8'))'''
+            
           
   
 if choice == 'Summarize': 
