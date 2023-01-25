@@ -38,7 +38,7 @@ if choice == 'News Article':
   if option == 'Business':
     url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business%20data.csv?token=GHSAT0AAAAAAB44S4MWGV3XYR3ETQ45HAZYY6Q4NMQ'
     df = pd.read_csv(url,encoding="latin-1")
-    st.write(df.head(11))
+    st.write(df.head(10))
     st.download_button("Download",
                       df.to_csv(),
                       file_name = 'train4.csv',
