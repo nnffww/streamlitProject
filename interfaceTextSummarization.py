@@ -39,7 +39,7 @@ if choice == 'News Article':
   if category == 'Business':
     button1 = st.button("Ad sales boost Time Warner profit")
     if button1: 
-        url = ('https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business/001.txt')
+        url = ('business/001.txt')
         for line in urllib.request.urlopen(url): 
             st.write(line.decode('utf-8'))
           
