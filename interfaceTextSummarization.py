@@ -36,14 +36,9 @@ if choice == 'News Article':
   option = st.selectbox("Select News Article", category)
     
   
-  if category == 'Business':
-    button1 = st.button("Ad sales boost Time Warner profit")
-    if button1: 
-        url = ('https://github.com/faraawaheeda/streamlitProject/blob/main/business/001.txt')
-        import webbrowser as wb
-        wb.open_new_tab(url)
-       ''' for line in urllib.request.urlopen(url): 
-            st.write(line.decode('utf-8'))'''
+  url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/train4.csv?token=GHSAT0AAAAAAB44S4MW6WIY3MH5OVMTRKGIY6QV2YQ'
+  df = pd.read_csv(url,encoding="latin-1")
+  st.write(df.head(10))
             
           
   
