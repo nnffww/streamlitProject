@@ -47,14 +47,25 @@ if choice == 'News Article':
           
   
 if choice == 'Summarize': 
+   uploaded_txt = st.file_uploader("Choose a file",type=["txt"])
+   if uploaded_txt is not None:
+      st.write(type(uploaded_txt))
+      file_details_txt = {"filename":uploaded_txt.name,"filetype":uploaded_txt.type,"filesize":uploaded_txt.size}
+      st.write(file_details_txt)
+      if uploaded_txt.type =="text/plain":
+         Dftxt = uploaded_txt.read()
+         raw_text = str(Dftxt,"utf-8")
+         st.text(raw_text)
+        
    uploaded_file = st.file_uploader("Choose a file",type=["csv"])
    if uploaded_file is not None:
       st.write("ORIGINAL CONTENT")
       type_file = type(uploaded_file)
+      st.write(type_file)
       file_details = {"filename":uploaded_file.name,"filetype":uploaded_file.type,"filesize":uploaded_file.size}
-      Df = pd.read_csv(uploaded_file)
-      st.dataframe(Df)
-      check_info = st.checkbox('File Information')
+      st.write(file_details)
+      df = pd.read_csv(uploaded_file)
+      st.dataframe(df)
    if st.button("Summarize"):
       st.write(raw_text)
       st.button("Copy text")
