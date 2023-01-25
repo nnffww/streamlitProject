@@ -32,13 +32,13 @@ textColor = '#FFFFFF'
 font = "sans serif"
     
 if choice == 'News Article': 
-  #category = ["Business","Entertaiment","Politics","Sport", "Technology"]
-  #option = st.selectbox("Select News Article", category)
+  category = ["Business","Entertaiment","Politics","Sport", "Technology"]
+  option = st.selectbox("Select News Article", category)
     
-  
-  url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/train4.csv?token=GHSAT0AAAAAAB44S4MWQC7YOZZYMMJVSCKIY6QWDOQ'
-  df = pd.read_csv(url,encoding="latin-1")
-  st.write(df.head(11))
+  if option == 'Business':
+    url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/train4.csv?token=GHSAT0AAAAAAB44S4MWQC7YOZZYMMJVSCKIY6QWDOQ'
+    df = pd.read_csv(url,encoding="latin-1")
+    st.write(df.head(11))
             
           
   
