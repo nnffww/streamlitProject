@@ -35,14 +35,14 @@ if choice == 'News Article':
   category = ["Business","Entertaiment","Politics","Sport", "Technology"]
   option = st.selectbox("Select News Article", category)
     
-  """
+  
   if category == 'Business':
-    st.button("Ad sales boost Time Warner profit")
-    if st.button("Ad sales boost Time Warner profit")
+    button1 = st.button("Ad sales boost Time Warner profit")
+    if button1: 
         url = ('https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business/001.txt')
         for line in urllib.request.urlopen(url): 
             st.write(line.decode('utf-8'))
-  """          
+          
   
 if choice == 'Summarize': 
    st.subheader("EXTRACTIVE TEXT SUMMARIZER")
