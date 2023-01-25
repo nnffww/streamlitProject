@@ -41,7 +41,7 @@ if choice == 'News Article':
     st.write(df.head(10))
     st.download_button("Download",
                       df.to_csv(),
-                      file_name = 'train4.csv',
+                      file_name = 'BusinessArticle.csv',
                       mime = 'text/csv')
                      
 if choice == 'Summarize': 
