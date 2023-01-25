@@ -38,8 +38,8 @@ if choice == 'News Article':
   if option == 'Business':
     #url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/train4.csv?token=GHSAT0AAAAAAB44S4MWQC7YOZZYMMJVSCKIY6QWDOQ'
     #df = pd.read_csv(url,encoding="latin-1")
-    url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business/001.txt?token=GHSAT0AAAAAAB44S4MX5LFAH2F6ZPD6MVYUY6QWSYQ'
-    df = open(url, 'r')
+    url = "https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/business/001.txt?token=GHSAT0AAAAAAB44S4MX5LFAH2F6ZPD6MVYUY6QWSYQ"
+    df = open(url, "r")
     st.write(df.read())
     #aticle1 = st.checkbox('Article 1')
     #if article1:
