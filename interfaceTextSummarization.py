@@ -38,7 +38,7 @@ if choice == 'News Article':
   
   url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/train4.csv'
   df = pd.read_csv(url,encoding="latin-1")
-  st.write(df.head(10))
+  st.write(df.head(11))
             
           
   
