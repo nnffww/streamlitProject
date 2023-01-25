@@ -32,8 +32,8 @@ textColor = '#FFFFFF'
 font = "sans serif"
     
 if choice == 'News Article': 
-  category = ["Business","Entertaiment","Politics","Sport", "Technology"]
-  option = st.selectbox("Select News Article", category)
+  #category = ["Business","Entertaiment","Politics","Sport", "Technology"]
+  #option = st.selectbox("Select News Article", category)
     
   
   url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/train4.csv'
