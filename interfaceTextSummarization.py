@@ -39,7 +39,10 @@ if choice == 'News Article':
     url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/train4.csv?token=GHSAT0AAAAAAB44S4MWQC7YOZZYMMJVSCKIY6QWDOQ'
     df = pd.read_csv(url,encoding="latin-1")
     st.write(df.head(15))
-    st.download_button('Download', content1)
+    st.download_button('Download',
+                      df.to_csv(),
+                      file_name = 'train4.csv',
+                      mime = 'text/csv')
             
           
   
