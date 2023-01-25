@@ -40,8 +40,8 @@ if choice == 'News Article':
     df = pd.read_csv(url,encoding="latin-1")
     st.write(df.head(11))
     aticle1 = st.checkbox('Article 1')
-    if article1 :
-        st.write(df['Text'][0],df['Summary'][0])
+    if article1:
+        st.write(df['Text'][0])
             
           
   
