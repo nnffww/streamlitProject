@@ -36,16 +36,14 @@ if choice == 'News Article':
   option = st.selectbox("Select News Article", category)
     
   if option == 'Business':
-    url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/train4.csv?token=GHSAT0AAAAAAB44S4MXLYHZ6NN4P5HTTD5QY6QXD4Q'
+    url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/train4.csv?token=GHSAT0AAAAAAB44S4MXI4VWKKQLGKH6HEEEY6Q367A'
     df = pd.read_csv(url,encoding="latin-1")
-    st.write(df.head(10))
+    st.write(df.head(5))
     st.download_button("Download",
                       df.to_csv(),
                       file_name = 'train4.csv',
                       mime = 'text/csv')
-            
-          
-  
+                     
 if choice == 'Summarize': 
    with st.form(key = 'nlpForm'):
       text = st.text_area("Original Content","Enter text here")
