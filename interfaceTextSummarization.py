@@ -36,7 +36,7 @@ if choice == 'News Article':
   option = st.selectbox("Select News Article", category)
     
   
-  url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/train4.csv?token=GHSAT0AAAAAAB44S4MW6WIY3MH5OVMTRKGIY6QV2YQ'
+  url = 'https://raw.githubusercontent.com/faraawaheeda/streamlitProject/main/train4.csv'
   df = pd.read_csv(url,encoding="latin-1")
   st.write(df.head(10))
             
