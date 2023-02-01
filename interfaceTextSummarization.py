@@ -7,6 +7,24 @@ import urllib.request
 import urllib
 from urllib.request import urlopen
 import urllib3
+import re   
+import warnings
+import os
+nltk.download('stopwords')
+nltk.download('punkt')
+from nltk.corpus import stopwords 
+from nltk.tokenize import word_tokenize, sent_tokenize
+from nltk.stem import WordNetLemmatizer
+from string import punctuation
+from nltk.cluster.util import cosine_distance
+from tensorflow import keras
+from tensorflow.keras import Sequential
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Dense,LSTM,Bidirectional,Flatten,Dropout,BatchNormalization,Embedding,Input,TimeDistributed
+from tensorflow.keras.utils import plot_model
+from keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+
 
 st.set_page_config(page_title="Extractive Text Summarization", page_icon=":tada:", layout="wide")
 st.markdown("<h1 style='text-align: center; color: white;'>EXTRACTIVE BASED TEXT SUMMARIZATION USING SENTIMENT ANALYSIS</h1>", unsafe_allow_html=True)
@@ -75,7 +93,23 @@ if choice == 'Summarize':
       df = pd.read_csv(uploaded_file)
       st.dataframe(df)
    if st.button("Summarize"):
-      st.write(raw_text)
-      st.button("Copy text")
-      st.write("Words:")
+      stop_words = set(stopwords.words('english')) 
+      def text_cleaner(text):
+        newString = text.lower()
+        newString = re.sub(r'\([^)]*\)', '', newString)
+        newString = re.sub('"','', newString)
+        newString = ' '.join([contraction_map[t] if t in contraction_map else t for t in newString.split(" ")])    
+        newString = re.sub(r"'s\b","",newString)
+        newString = re.sub("[^a-zA-Z]", " ", newString) 
+        tokens = [w for w in newString.split() if not w in stop_words]
+        long_words=[]
+        for i in tokens:
+            if len(i)>=3:                  #removing short word
+                long_words.append(i)   
+        return (" ".join(long_words)).strip()
+
+      cleaned_text = []
+      for t in data['Text']:
+        cleaned_text.append(text_cleaner(t))
+       
   
